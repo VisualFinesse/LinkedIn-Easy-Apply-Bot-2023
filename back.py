@@ -9,30 +9,17 @@ from selenium.common.exceptions import NoSuchElementException
 from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.common.by import By
 from selenium.webdriver.support import expected_conditions as EC
-from selenium.webdriver.support.ui import Select
 from bs4 import BeautifulSoup
 import pandas as pd
 import pyautogui
+
 from urllib.request import urlopen
 from webdriver_manager.chrome import ChromeDriverManager
 import re
 import yaml
 from datetime import datetime, timedelta
 
-""" The tkinter window is a GUI popup to pause the script to allow user to validate human verification """
-# import tkinter as tk
-# # create root window
-# root = tk.Tk()
-# # create label widget and set text
-# label = tk.Label(root, text="Check for Human Verification, Press Continue when done")
-# # create button widget and set text + command
-# button = tk.Button(root, text="OK", command=root.destroy)
-# # configure label and button widgets
-# label.pack(pady=10)
-# button.pack()
-
 log = logging.getLogger(__name__)
-
 driver = webdriver.Chrome(ChromeDriverManager().install())
 
 
@@ -63,7 +50,7 @@ class EasyApplyBot:
     setupLogger()
     # MAX_SEARCH_TIME is 10 hours by default, feel free to modify it
     # MAX_SEARCH_TIME = 10 * 60 * 60
-    MAX_SEARCH_TIME = 5 * 60
+    MAX_SEARCH_TIME = 10 * 60 * 60
 
     def __init__(
         self,
@@ -139,12 +126,11 @@ class EasyApplyBot:
             )
             user_field.send_keys(username)
             user_field.send_keys(Keys.TAB)
-            time.sleep(1)
+            time.sleep(2)
             pw_field.send_keys(password)
-            time.sleep(1)
+            time.sleep(2)
             login_button.click()
-            # Call GUI popup to pause script to allow user to check for verification
-            # root.mainloop()
+            time.sleep(3)
         except TimeoutException:
             log.info(
                 "TimeoutException! Username/password field or login button not found"
@@ -171,6 +157,8 @@ class EasyApplyBot:
             if len(combos) > 500:
                 break
 
+    # self.finish_apply() --> this does seem to cause more harm than good, since it closes the browser which we usually don't want, other conditions will stop the loop and just break out
+
     def applications_loop(self, position, location):
         count_application = 0
         count_job = 0
@@ -191,23 +179,21 @@ class EasyApplyBot:
                 )
 
                 # sleep to make sure everything loads, add random to make us look human.
-                randoTime: float = random.uniform(0.5, 1.5)
+                randoTime: float = random.uniform(3.5, 4.9)
                 log.debug(f"Sleeping for {round(randoTime, 1)}")
                 time.sleep(randoTime)
                 self.load_page(sleep=1)
 
                 # LinkedIn displays the search results in a scrollable <div> on the left side, we have to scroll to its bottom
 
-                scrollresults = self.browser.find_element(
-                    By.CLASS_NAME, "jobs-search-results-list"
+                scrollresults = self.browser.find_element(By.CLASS_NAME,
+                    "jobs-search-results-list"
                 )
                 # Selenium only detects visible elements; if we scroll to the bottom too fast, only 8-9 results will be loaded into IDs list
                 for i in range(300, 3000, 100):
-                    self.browser.execute_script(
-                        "arguments[0].scrollTo(0, {})".format(i), scrollresults
-                    )
+                    self.browser.execute_script("arguments[0].scrollTo(0, {})".format(i), scrollresults)
 
-                time.sleep(0.3)
+                time.sleep(1)
 
                 # get job links, (the following are actually the job card objects)
                 links = self.browser.find_elements("xpath", "//div[@data-job-id]")
@@ -229,12 +215,10 @@ class EasyApplyBot:
                             jobID = temp.split(":")[-1]
                             IDs.append(int(jobID))
                 IDs: list = set(IDs)
-                log.debug(IDs)
 
                 # remove already applied jobs
                 before: int = len(IDs)
                 jobIDs: list = [x for x in IDs if x not in self.appliedJobIDs]
-
                 after: int = len(jobIDs)
 
                 # it assumed that 25 jobs are listed in the results window
@@ -265,11 +249,11 @@ class EasyApplyBot:
                             string_easy = "* has Easy Apply Button"
                             log.info("Clicking the EASY apply button")
 
-                            # Scrolls to the top of the page to avoid the "Apply" button being hidden by the top banner
+                            #Scrolls to the top of the page to avoid the "Apply" button being hidden by the top banner
                             self.browser.execute_script("window.scrollTo(0, 0);")
-                            time.sleep(0.5)
+                            time.sleep(1)
                             button.click()
-                            time.sleep(0.1)
+                            time.sleep(3)
                             # self.fill_out_phone_number()
                             result: bool = self.send_resume()
                             count_application += 1
@@ -286,14 +270,14 @@ class EasyApplyBot:
                     self.write_to_file(button, jobID, self.browser.title, result)
 
                     # sleep every 20 applications
-                    # if count_application != 0 and count_application % 20 == 0:
-                    #     sleepTime: int = random.randint(500, 900)
-                    #     log.info(
-                    #         f"""********count_application: {count_application}************\n\n
-                    #                 Time for a nap - see you in:{int(sleepTime / 60)} min
-                    #             ****************************************\n\n"""
-                    #     )
-                    #     time.sleep(sleepTime)
+                    if count_application != 0 and count_application % 20 == 0:
+                        sleepTime: int = random.randint(500, 900)
+                        log.info(
+                            f"""********count_application: {count_application}************\n\n
+                                    Time for a nap - see you in:{int(sleepTime / 60)} min
+                                ****************************************\n\n"""
+                        )
+                        time.sleep(sleepTime)
 
                     # go to new page if all jobs are done
                     if count_job == len(jobIDs):
@@ -357,19 +341,16 @@ class EasyApplyBot:
 
         submitted = False
         for i in range(5):
-            next_locater = (
-                By.CSS_SELECTOR,
-                "button[aria-label='Continue to next step']",
-            )
+            next_locater = (By.CSS_SELECTOR, "button[aria-label='Continue to next step']")
 
-            input_field_phone = self.browser.find_element(
+            input_field = self.browser.find_element(
                 "xpath", "//input[contains(@name,'phoneNumber')]"
             )
 
-            if input_field_phone:
-                input_field_phone.clear()
-                input_field_phone.send_keys(self.phone_number)
-                time.sleep(random.uniform(0.5, 1))
+            if input_field:
+                input_field.clear()
+                input_field.send_keys(self.phone_number)
+                time.sleep(random.uniform(4.5, 6.5))
 
                 next_locater = (
                     By.CSS_SELECTOR,
@@ -383,9 +364,7 @@ class EasyApplyBot:
                 # Click Next or submit button if possible
                 button: None = None
                 if is_present(next_locater):
-                    button: None = self.wait.until(
-                        EC.element_to_be_clickable(next_locater)
-                    )
+                    button: None = self.wait.until(EC.element_to_be_clickable(next_locater))
 
                 if is_present(error_locator):
                     for element in self.browser.find_elements(
@@ -397,7 +376,7 @@ class EasyApplyBot:
                             break
                 if button:
                     button.click()
-                    time.sleep(random.uniform(0.5, 1))
+                    time.sleep(random.uniform(1.5, 2.5))
                     if i in (3, 4):
                         submitted = True
                     if i != 2:
@@ -408,178 +387,109 @@ class EasyApplyBot:
         return submitted
 
     def send_resume(self) -> bool:
-        def scroll_down_modal():
-            # Sometimes the model has a scroll and we can't see the "next, review, or submit" buttons. So Attempt to scroll down on the modal
-            log.debug("Attempting to scroll down modal")
-            modal = WebDriverWait(self.browser, 10).until(
-                EC.presence_of_element_located(
-                    (By.CLASS_NAME, "artdeco-modal__content")
-                )
+        def is_present(button_locator) -> bool:
+            return (
+                len(self.browser.find_elements(button_locator[0], button_locator[1]))
+                > 0
             )
-
-            # Scroll the modal
-            self.browser.execute_script(
-                "arguments[0].scrollTop = arguments[0].scrollHeight", modal
-            )
-            time.sleep(random.uniform(0.5, 1))
-            log.debug("Scrolling down modal")
 
         try:
-            time.sleep(random.uniform(0.5, 1))
-            count = 0
-            answer_count = 0
-            submited = False
+            time.sleep(random.uniform(1.5, 2.5))
+            next_locater = (
+                By.CSS_SELECTOR,
+                "button[aria-label='Continue to next step']",
+            )
+            review_locater = (
+                By.CSS_SELECTOR,
+                "button[aria-label='Review your application']",
+            )
+            submit_locater = (
+                By.CSS_SELECTOR,
+                "button[aria-label='Submit application']",
+            )
+            submit_application_locator = (
+                By.CSS_SELECTOR,
+                "button[aria-label='Submit application']",
+            )
+            error_locator = (
+                By.CSS_SELECTOR,
+                "p[data-test-form-element-error-message='true']",
+            )
+            upload_locator = (By.CSS_SELECTOR, "input[name='file']")
+            follow_locator = (By.CSS_SELECTOR, "label[for='follow-company-checkbox']")
 
+            submitted = False
             while True:
-                log.debug("Resume submit loop")
-                log.debug("count: " + str(count))
-                if count >= 5:
-                    log.info("Infinite loop detected")
-                    break
-
-                try:
-                    errorText = self.browser.find_elements_by_class_name(
-                        "artdeco-inline-feedback__message"
+                # Upload Cover Letter if possible
+                if is_present(upload_locator):
+                    input_buttons = self.browser.find_elements(
+                        upload_locator[0], upload_locator[1]
                     )
-                except:
-                    errorText = None
+                    for input_button in input_buttons:
+                        # Wait for the element to be present on the page
+                        wait = WebDriverWait(driver, 10)
+                        parent = wait.until(EC.presence_of_element_located((By.XPATH, "//parent_element_xpath")))
 
-                try:
-                    review_button = driver.find_element_by_xpath(
-                        "//button[contains(span, 'Review')]"
-                    )
-                except:
-                    review_button = None
+                        # Locate the sibling element
+                        sibling = parent.find_element(By.XPATH, "preceding-sibling::*")
+                        grandparent = sibling.find_element(By.XPATH, "..")
+                        for key in self.uploads.keys():
+                            sibling_text = sibling.text
+                            gparent_text = grandparent.text
+                            if (
+                                key.lower() in sibling_text.lower()
+                                or key in gparent_text.lower()
+                            ):
+                                input_button.send_keys(self.uploads[key])
 
-                try:
-                    submit_button = driver.find_element_by_xpath(
-                        "//button[contains(span, 'Submit')]"
-                    )
-                except:
-                    submit_button = None
+                    # input_button[0].send_keys(self.cover_letter_loctn)
+                    time.sleep(random.uniform(4.5, 6.5))
 
-                try:
-                    next_button = driver.find_element_by_xpath(
-                        "//button[contains(span, 'Next')]"
-                    )
-                except:
-                    next_button = None
-
-                if errorText:
-                    if answer_count >= 5:
-                        log.info("Failed to answer question correctly 3 times")
-                        break
-
-                    log.debug("Wrong answer detected")
-                    # Get the fields
-                    try:
-                        text_field = self.browser.find_elements_by_class_name(
-                            "artdeco-text-input--input"
+                # Click Next or submit button if possible
+                button: None = None
+                buttons: list = [
+                    next_locater,
+                    review_locater,
+                    follow_locator,
+                    submit_locater,
+                    submit_application_locator,
+                ]
+                for i, button_locator in enumerate(buttons):
+                    if is_present(button_locator):
+                        button: None = self.wait.until(
+                            EC.element_to_be_clickable(button_locator)
                         )
-                    except:
-                        text_field = None
 
-                    try:
-                        yes_radials = driver.find_elements_by_xpath(
-                            '//Input[@data-test-text-selectable-option__label="Yes"]'
-                        )
-                    except:
-                        yes_radials = None
-                    try:
-                        no_radials = driver.find_elements_by_xpath(
-                            '//Input[@data-test-text-selectable-option__label="No"]'
-                        )
-                    except:
-                        no_radials = None
-
-                    # Loop through radial buttons and click "Yes"
-                    for radial in yes_radials:
-                        # Check if radial is unselected and has label "Yes"
-                        if (
-                            not radial.is_selected()
-                            and radial.get_attribute(
-                                "data-test-text-selectable-option__label"
-                            )
-                            == "Yes"
+                    if is_present(error_locator):
+                        for element in self.browser.find_elements(
+                            error_locator[0], error_locator[1]
                         ):
-                            # Click on "Yes" radial if condition is satisfied
-                            radial.click()
-
-                    # Fills out input fields
-                    input_fields = driver.find_elements_by_class_name(
-                        "artdeco-text-input--label"
-                    )
-
-                    for input_fields in text_field:
-                        # log.debug("input field loop Var:" + input_fields)
-                        # Hidden fields
-                        if input_fields.get_attribute("type") == "hidden":
-                            log.debug("Hidden field")
-                            continue
-                        # Submits the string "2" if the field is empty
-                        textInput = input_fields.get_attribute("value")
-                        log.debug(textInput)
-                        if not textInput:
-                            # Need a random values between 2 and 3
-                            randoNum = random.randint(4, 6)
-                            randoDec = randoNum / 2
-                            input_fields.send_keys(randoDec)
-                            log.info("Answered question")
-                            time.sleep(random.uniform(0.5, 2.5))
-
-                    dropdowns = driver.find_elements_by_xpath("//select")
-                    log.debug(dropdowns)
-
-                    for elem in dropdowns:
-                        sel = Select(elem)
-                        val = sel.first_selected_option.text
-                        log.debug("Selected option: " + val)
-                        if val == "Select an option":
-                            sel.select_by_value("Yes")
-                            # sel.select_by_visible_text('Yes')
-                    # In case we want to select no
-                    # elem.select_by_value("No")
-
-                    log.debug("Finished answering questions")
-                    time.sleep(random.uniform(0.5, 1))
-                    answer_count += 1
-
-                elif next_button:
-                    next_button = driver.find_element_by_xpath(
-                        "//button[contains(span, 'Next')]"
-                    )
-                    next_button.click()
-
-                    log.info("Clicked next button")
-                    time.sleep(random.uniform(0.5, 1))
-                elif review_button:
-                    review_button.click()
-                    log.info("Clicked Review button")
-                    time.sleep(random.uniform(0.5, 1))
-
-                elif submit_button:
-                    submit_button.click()
-                    log.info("Clicked submit button")
-                    time.sleep(random.uniform(0.5, 1))
-                    submited = True
+                            text = element.text
+                            if "Please enter a valid answer" in text:
+                                button = None
+                                break
+                    if button:
+                        button.click()
+                        time.sleep(random.uniform(1.5, 2.5))
+                        if i in (3, 4):
+                            submitted = True
+                        if i != 2:
+                            break
+                if button == None:
+                    log.info("Could not complete submission")
+                    break
+                elif submitted:
+                    log.info("Application Submitted")
                     break
 
-                else:
-                    log.debug("Submit button not available on current screen")
-                    scroll_down_modal()
-                    count += 1
-                    log.debug(
-                        "Submit button not found and no action available (Count: "
-                        + str(count)
-                        + ")"
-                    )
+            time.sleep(random.uniform(1.5, 2.5))
 
         except Exception as e:
             log.info(e)
             log.info("cannot apply to this job")
-            submited = False
+            raise (e)
 
-        return submited
+        return submitted
 
     def load_page(self, sleep=1):
         scroll_page = 0

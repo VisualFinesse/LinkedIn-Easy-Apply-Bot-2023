@@ -1,24 +1,115 @@
-username: 
-password: 
+username:
+password:
 phone_number:
 
 positions:
 - Data Scientist
-- # Another position you want to search for
+- Software Engineer
+- Full Stack Developer
+- Junior Software Engineer
+- Entry-Level Developer
+- Associate Developer
+- Frontend Developer
+- Backend Developer
+- Full Stack Developer
+- Junior Web Developer
+- Mobile App Developer
+- JavaScript Developer
+- Python Developer
+- Ruby Developer
+- Java Developer
+- Junior Systems Developer
+- Quality Assurance Tester
+- SQL Developer
+- Database Developer
+- C++ Developer
+- IT Project Coordinator
+- IT Support Analyst
+- Computer Systems Analyst
+- Application Support Analyst
+- Application Developer
+- Game Developer
+- Mobile Game Developer
+- .NET Developer
+- Network Administrator
+- IT Coordinator
+- Technical Analyst
+- Software Tester
+- Junior Programmer Analyst
+- UI Developer
+- UX Designer
+- UI/UX Designer
+- Frontend Web Designer
+- Data Analyst
+- Business Intelligence Analyst
+- Technical Support Specialist
+- HTML/CSS Developer
+- Algorithm Developer
+- Cloud Solutions Engineer
+- Junior Cloud Developer
+- Security Analyst
+- IT Compliance Analyst
+- Cybersecurity Analyst
+- Android App Developer
+- iOS App Developer
+- CRM Developer
+- Big Data Engineer
+- Data Science Analyst
+- Machine Learning Engineer
+- Ecommerce Developer
+- Wordpress Developer
+- SEO Specialist
+- Digital Marketing Developer
+- Junior DevOps Engineer
+- Computer Programmer
+- Entry-Level Systems Engineer
+- PHP Developer
+- Ruby on Rails Developer
+- VR Application Developer
+- AR Application Developer
+- Webflow Developer
+- Software Development Intern
+- Information Security Analyst
+- Computer Network Architect
+- IT Consultant
+- Systems Integrator
+- Systems Administrator
+- API Developer
+- Digital Content Developer
+- Social Media Developer
+- R Developer
+- Scala Developer
+- Swift Developer
+- Kotlin Developer
+- SAS Developer
+- Golang Developer
+- Svelte Developer
+- Rust Developer
+- TypeScript Developer
+- Vue.js Developer
+- Angular Developer
+- React Developer
+- Bootstrap Developer
+- Django Developer
+- Flask Developer
+- Express.js Developer
+- Node.js Developer
+- Web3 Developer
+
 - # A third position you want to search for
 
 locations:
 - Remote
-- # A second location you want to search in 
+- City, State
+
 
 # --------- Optional Parameters -------
-# uploads:
-#  Resume: # PATH TO Resume 
-#  Cover Letter: # PATH TO cover letter
-#  Photo: # PATH TO photo
+uploads:
+Resume: C:\Windows\System32\**RESUME**
+Cover Letter: C:\Windows\System32\**COVER_LETTER**
 
 
-# output_filename:
+output_filename:
 # - # PATH TO OUTPUT FILE (default output.csv)
 
 # blacklist:

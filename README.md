@@ -1,3 +1,14 @@
+# UPDATES:
+Added a gui pop up (commented out) in the case linked-in decides to start requesting human verification.
+
+Added code so that it answers linked-in easy-apply questions and submits resume.
+
+It answers empty fields with a random number 2, 2.5, or 3 (These questions typically corrilate to years of experience).
+
+It answers "yes" to any unanswered radial question.
+
+It answers "yes" to any unanswered dropdowns (if yes is an option).
+
 # Linkedin EasyApply Bot
 Automate the application process on LinkedIn
 

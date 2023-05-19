@@ -1,0 +1,187 @@
+2023-05-01 14:53:23,3497350624,Frontend Developer,360 Privacy,False,False
+2023-05-15 20:27:56,3576609537,Data Scientist,Ideaon,False,False
+2023-05-15 20:38:30,3549620996,Product Owner,RiVi Consulting Group L.L.C,True,False
+2023-05-15 20:43:39,3604331017,Product Owner,Elsdon Consulting ltd,True,False
+2023-05-15 20:51:35,3572526210,Senior Ruby on Rails Engineer,Simple Thread,True,True
+2023-05-15 21:44:21,3579594647,Technical Product Owner (Hadoop),Eliassen Group,True,False
+2023-05-15 21:45:13,3561639575,Product Owner - (REMOTE),AMH,True,True
+2023-05-15 21:47:06,3580685082,Product Owner - Mortgage,Wipro,True,False
+2023-05-15 21:50:19,3605897217,Senior Full-Stack Engineer,DoNotPay,True,False
+2023-05-15 21:54:44,3542406147,Sr. Azure Cloud Engineer I,The Word & Brown Companies,True,False
+2023-05-15 21:55:43,3545088644,Senior Coldfusion Developer,Marketing Edge Group,True,True
+2023-05-15 21:56:40,3594320266,Infrastructure Engineer,Massachusetts Property Insurance Underwriting Association,True,True
+2023-05-15 21:58:59,3511435788,Senior .NET Developer,SAIL Loans,True,False
+2023-05-15 22:05:30,3533781125,Data Scientist - Ads (Senior/Staff),Nextdoor,True,False
+2023-05-15 22:07:29,3522604170,Data Scientist,"Surya Systems, Inc",True,False
+2023-05-15 22:07:42,3417543435,GIS Programmer,Envision,False,False
+2023-05-15 22:08:54,3591740555,Data Scientist,Xoriant,True,False
+2023-05-15 22:10:19,3602717840,Principal Data Scientist -Personalized Medicine,Scipher Medicine,True,False
+2023-05-15 22:12:07,3592281234,Data Analytics Intern,M3 USA,True,False
+2023-05-15 22:19:00,3138197632,Data Scientist,GlobalLogic,True,True
+2023-05-15 22:21:52,3587251857,Machine Learning Engineer - Graphics & Computer Vision,Genies,True,False
+2023-05-15 22:24:51,3557315225,Data Scientist,"Trinity Industries, Inc.",True,False
+2023-05-15 22:26:29,3603645978,Data scientist,Ascendion,True,True
+2023-05-15 22:28:56,3577075485,Data Scientist,Programmers.io,True,True
+2023-05-15 22:32:14,3239170695,Product Owner,Photon,True,False
+2023-05-15 22:37:07,3603189123,Software Engineer - Vue & Nuxt,Jobot,False,False
+2023-05-15 22:38:42,3588195600,Python Developer,OrionIG,True,False
+2023-05-15 22:39:50,3599717402,REMOTE JavaScript Developer,CyberCoders,True,True
+2023-05-15 22:42:57,3389919775,Python Developer,Photon,True,False
+2023-05-15 22:44:27,3522213154,Associate Full Stack Developer,Eleven Recruiting,True,False
+2023-05-15 22:45:30,3606952487,Microsoft Dynamics Developer Remote,"Liberty Personnel Services, Inc.",True,True
+2023-05-15 22:48:19,3579534250,Back End Developer,Trilogy International,True,True
+2023-05-15 22:49:33,3599904043,Python Framework Developer - Remote,Blueclip,True,False
+2023-05-15 22:50:50,3582138678,Python Developer,UST,True,False
+2023-05-15 22:51:03,3599721153,"REMOTE Software Engineer (PHP, JS, AWS)",CyberCoders,False,False
+2023-05-17 16:40:10,3605185675,Product Owner,SecureKloud Technologies,True,True
+2023-05-17 16:42:42,3389533326,Tech & Emerging Growth Tax Senior Manager,Withum,True,False
+2023-05-17 16:43:34,3456099600,Project Manager,RealREPP,True,True
+2023-05-17 16:44:24,3586339346,"Healthcare Product Owner (Onsite - Nashville/Franklin, TN)",Conexess Group,True,True
+2023-05-17 16:45:14,3596710035,IT Engagement Manager- 100% Remote,Conexess Group,True,True
+2023-05-17 16:47:25,3594393876,Project Manager,JAM Workforce,True,False
+2023-05-17 16:49:35,3580192406,Royalty Manager,GoldState Music,True,False
+2023-05-17 16:52:04,3485206552,"Principal Product Manager, Search",LTK (formerly rewardStyle & LIKEtoKNOW.it),True,False
+2023-05-17 16:54:14,3515929754,Medicare Project Manager,Blue Signal Search,True,False
+2023-05-17 16:55:05,3595390234,Project Manager - Multi-Family Wood Framed Construction,CyberCoders,True,True
+2023-05-17 16:55:56,3603078687,Semi Driver,"Sunstate Equipment Co., LLC",True,True
+2023-05-17 16:58:06,3549669153,E-commerce Manager Job Description,Marie Nicole Clothing,True,False
+2023-05-17 17:00:17,3588965793,Project Manager,icon Mechanical,True,False
+2023-05-17 17:01:09,3539900461,Contract IT Project Manager,LaSalle Network,True,True
+2023-05-17 17:03:19,3580504122,JDE Business Analyst (4),Insight Global,True,False
+2023-05-17 17:05:52,3609301950,Associate Product Owner,First Advantage,True,False
+2023-05-17 17:08:02,3608008639,Product Owner,"LanceSoft, Inc.",True,False
+2023-05-17 17:10:13,3572352074,Senior Manager- Software Engineering,Asurion,True,False
+2023-05-17 17:11:05,3439122766,Field/Office Engineer - Central District 2023,Kiewit,True,True
+2023-05-17 17:13:34,3597022552,Preconstruction Project Manager,Jobot,True,False
+2023-05-17 17:15:44,3600899036,TBR Marketing and Product Manager,Hankook Tire America Corp.,True,False
+2023-05-17 17:16:36,3589284573,Project Manager,"FRWD Construction, LLC",True,True
+2023-05-17 17:18:45,3595162990,Project Manager (Moving Services),Alchemy Global Talent Solutions,True,False
+2023-05-17 17:19:36,3509517301,CDL-A LOCAL DELIVERY DRIVER,Mohawk Industries,True,True
+2023-05-17 17:20:28,3560186492,Project Manager,Barnard Construction,True,True
+2023-05-17 17:23:58,3579551751,Solutions Engineer,Redwood Software,True,False
+2023-05-17 17:26:30,3569075083,Lead Data Engineer- Remote,Brado,True,False
+2023-05-17 17:28:40,3599578253,Application Security Engineer,InterEx Group,True,False
+2023-05-17 17:30:50,3574564898,Full Stack Engineer,Signify Technology,True,False
+2023-05-17 17:33:21,3596082855,"Frontend Developer, Contract",Left Field Labs,True,False
+2023-05-17 17:35:32,3589743528,Sr. Full Stack Developer,CODE/+/TRUST,True,False
+2023-05-17 17:36:45,3581114153,Fullstack Developer,Understanding Recruitment,True,False
+2023-05-17 17:37:43,3581744040,100% Remote Full Stack Developer (IoT),Summit Human Capital,True,False
+2023-05-17 17:38:40,3605605933,Full Stack Engineer,DataPrime,True,False
+2023-05-17 17:39:37,3369796668,Founding Software Engineer,Thera (YC S22),True,False
+2023-05-17 17:40:33,3496769992,Software Engineer - Remote,Algo Capital Group,True,False
+2023-05-17 17:41:31,3556448712,Software Developer IV,Jenzabar,True,False
+2023-05-17 17:42:28,3601978957,3dx Software Developer,Processia,True,False
+2023-05-17 17:43:25,3381573462,Lead Backend Engineer,Digitech Sourcing,True,False
+2023-05-17 17:44:23,3599714902,REMOTE JavaScript Developer,CyberCoders,True,False
+2023-05-17 17:45:21,3573071321,Founding Full Stack Engineer,Storm3,True,False
+2023-05-17 17:46:17,3599981917,WAF Engineer (Application Security Specialist),Russell Tobin,True,False
+2023-05-17 17:47:15,3601098721,Atlassian Solutions Engineer,Forty8Fifty Labs,True,False
+2023-05-17 17:48:12,3569208546,Staff Software Engineer - Full Stack,Outdoorsy,True,False
+2023-05-17 17:49:10,3455320291,Lead Full Stack Developer,Votiro,True,False
+2023-05-17 17:50:07,3602046820,Front End WinUI Developer,ArmaHosts,True,False
+2023-05-17 17:51:04,3582434664,Staff Software Engineer,Glocomms,True,False
+2023-05-17 19:09:20,3605142286,Technical Product Owner,Swift Strategic Solutions Inc,True,False
+2023-05-17 19:10:57,3610331285,Product Owner,A-Line Staffing Solutions,True,False
+2023-05-17 19:13:15,3580770339,Product Owner,MMIT (Managed Markets Insight & Technology),True,False
+2023-05-17 19:13:58,3609527719,Contract – Product Owner,Electrify America,True,True
+2023-05-17 19:15:36,3597696295,Salesforce Product Owner,TECHOHANA,True,False
+2023-05-17 19:17:33,3609550003,Product Owner,NielsenIQ,True,False
+2023-05-17 19:19:11,3605138740,Product Manager (Infrastructure Management),BayOne Solutions,True,False
+2023-05-17 19:19:54,3592140212,Product Owner,Perficient,True,True
+2023-05-17 19:21:32,3547264955,Lead Software Product Owner,MN8 Energy,True,False
+2023-05-17 19:23:27,3608272704,Product Analytics Manager,LTK (formerly rewardStyle & LIKEtoKNOW.it),True,False
+2023-05-17 19:25:05,3605174464,Product Owner,HireRising,True,False
+2023-05-17 19:26:43,3610768326,"Manager, Product Management",Anatomy IT,True,False
+2023-05-17 19:28:21,3594444233,Post Market Quality Product Owner,SQA Solution,True,False
+2023-05-17 19:30:18,3575531086,Product Owner - Demand Generation,BHG Financial,True,False
+2023-05-17 19:30:59,3594989777,Product Owner - Enterprise B2B Marketplace Platform,UNIRGY,True,True
+2023-05-17 19:32:37,3593519073,Product Owner - Risk Products (1379308),Tier4 Group,True,False
+2023-05-17 19:33:18,3586336871,Product Owner (AWS Integration),Conexess Group,True,True
+2023-05-17 19:34:56,3610453997,VP of Sales,J. Galt Finance Suite,True,False
+2023-05-17 19:37:09,3574220781,"QA Product Owner, AEM",TA Digital,True,False
+2023-05-17 19:39:06,3610767088,Senior Product Owner,First Advantage,True,False
+2023-05-17 19:40:45,3603252338,ADOBE -AEP,Focus GTS,True,False
+2023-05-17 19:42:41,3550966260,Software Engineering Manager,Right Networks,True,False
+2023-05-17 19:45:39,3588948745,Lead Full Stack Engineer (1378916),Tier4 Group,True,False
+2023-05-17 19:47:36,3545085964,Senior Full Stack Engineer,Revel,True,False
+2023-05-17 19:49:31,3599762573,Sr. Fullstack Nodejs Engineer,Jobot,True,False
+2023-05-17 19:51:09,3578165267,Sr Java Developer,"Resolution Technologies, Inc.",True,False
+2023-05-17 19:53:30,3538893856,JavaScript Developer,Solution Street,True,False
+2023-05-17 19:55:08,3555105831,"Systems Architect/Developer to $150,000",LifeQuotes.com,True,False
+2023-05-17 19:56:46,3580612009,Sr DevOps Engineer - 100% Remote,PAR Technology,True,False
+2023-05-17 19:58:41,3610746287,"Senior Software Engineer, Backend - Links",LTK (formerly rewardStyle & LIKEtoKNOW.it),True,False
+2023-05-17 20:00:20,3584145457,Full Stack Developer,4Patriots,True,False
+2023-05-17 20:02:18,3597211066,Senior Software Engineer,Iron Galaxy Studios,True,False
+2023-05-17 20:03:56,2010207804,Senior Salesforce Commerce Cloud Developer,Oliver Parks,True,False
+2023-05-17 20:05:34,3404661189,Principal or Lead Full-Stack Javascript React REMOTE USA,"TRIAD Group, Inc.",True,False
+2023-05-17 20:06:17,3594460367,Sr Dot Net Developer,DISYS,True,True
+2023-05-17 22:21:23,3590945803,Founding Software Engineer,Speakeasy,True,False
+2023-05-17 22:21:45,3522453911,Software Engineer,Atomic Invest,True,False
+2023-05-17 22:23:37,3534443802,Node Engineer,IT Motives,True,False
+2023-05-18 14:33:42,3577921921,Full Stack Developer,Eliassen Group,True,False
+2023-05-18 14:34:08,3590945803,Founding Software Engineer,Speakeasy,True,False
+2023-05-18 16:41:04,3605897217,Senior Full-Stack Engineer,DoNotPay,True,False
+2023-05-18 16:41:18,3577921921,Full Stack Developer,Eliassen Group,True,False
+2023-05-18 16:52:29,3533781125,Data Scientist - Ads (Senior/Staff),Nextdoor,True,False
+2023-05-18 16:52:44,3582151429,Staff Data Scientist-Lead,Beckman Coulter Diagnostics,True,False
+2023-05-18 18:19:35,3599762573,Sr. Fullstack Nodejs Engineer,Jobot,True,True
+2023-05-18 19:57:15,3604541831,Senior Front-end/Fullstack Developer,QuAIL Technologies,True,False
+2023-05-18 20:01:01,3611944197,Software Engineer,Dokkimi,True,True
+2023-05-18 20:01:20,3588948745,Lead Full Stack Engineer (1378916),Tier4 Group,True,True
+2023-05-18 20:01:53,3607781901,Software Architect,Anomalous Intelligence,True,True
+2023-05-18 20:02:11,3603080339,Software Architect (Full-Time/W2),SearchArc,True,True
+2023-05-18 20:02:29,3522453911,Software Engineer,Atomic Invest,True,True
+2023-05-18 20:02:53,3602987292,Power BI Developer,Thorndale Partners,True,True
+2023-05-18 20:03:15,3542209824,Data Engineer,CoreCivic,True,True
+2023-05-18 20:03:37,3588965793,Project Manager,icon Mechanical,True,False
+2023-05-18 20:11:26,3604541831,Senior Front-end/Fullstack Developer,QuAIL Technologies,True,True
+2023-05-18 20:11:39,3588948745,Lead Full Stack Engineer (1378916),Tier4 Group,False,False
+2023-05-18 20:11:51,3599762573,Sr. Fullstack Nodejs Engineer,Jobot,False,False
+2023-05-18 20:12:08,3606409869,"1) (Remote) Senior Backend Engineer, Corporate Travel",Hopper,True,False
+2023-05-18 20:19:23,3609174275,Product Owner,Nityo Infotech,True,False
+2023-05-18 20:19:42,3598845447,Solutions Architect,Ingram Content Group,True,False
+2023-05-18 20:24:40,3604541831,Senior Front-end/Fullstack Developer,QuAIL Technologies,False,False
+2023-05-18 20:24:53,3588948745,Lead Full Stack Engineer (1378916),Tier4 Group,False,False
+2023-05-18 20:25:06,3599762573,Sr. Fullstack Nodejs Engineer,Jobot,False,False
+2023-05-18 20:25:23,3606409869,"1) (Remote) Senior Backend Engineer, Corporate Travel",Hopper,True,False
+2023-05-18 20:34:17,3601438609,Full Stack .Net Developer,Zycron,True,False
+2023-05-18 20:34:38,3549620996,Product Owner,RiVi Consulting Group L.L.C,True,False
+2023-05-18 20:37:00,3601438609,Full Stack .Net Developer,Zycron,True,False
+2023-05-18 20:39:41,3606109749,Full Stack Engineer,CarBuckets,True,True
+2023-05-18 20:49:20,3606109749,Full Stack Engineer,CarBuckets,False,False
+2023-05-18 20:49:33,3604541831,Senior Front-end/Fullstack Developer,QuAIL Technologies,False,False
+2023-05-18 20:49:46,3588948745,Lead Full Stack Engineer (1378916),Tier4 Group,False,False
+2023-05-18 20:49:59,3599762573,Sr. Fullstack Nodejs Engineer,Jobot,False,False
+2023-05-18 21:05:50,3607045505,Back End Developer,Planet Technology,True,True
+2023-05-18 21:06:07,3590945803,Founding Software Engineer,Speakeasy,True,True
+2023-05-18 21:06:23,3610336141,Full Stack Engineer,Kavaliro,True,False
+2023-05-18 21:06:41,3562243473,Sr. Full Stack Engineer,Talener,True,False
+2023-05-18 21:54:46,3588948745,Lead Full Stack Engineer (1378916),Tier4 Group,False,False
+2023-05-18 21:54:59,3599762573,Sr. Fullstack Nodejs Engineer,Jobot,False,False
+2023-05-18 21:55:12,3607781901,Software Architect,Anomalous Intelligence,False,False
+2023-05-18 21:55:37,3578263440,Middleware Engineer,Luxoft,True,False
+2023-05-18 21:58:35,3609174275,Product Owner,Nityo Infotech,True,False
+2023-05-18 21:59:01,3549620996,Product Owner,RiVi Consulting Group L.L.C,True,True
+2023-05-18 21:59:21,3545625366,Product Owner,YPrime,True,True
+2023-05-18 21:59:37,3579594647,Technical Product Owner (Hadoop),Eliassen Group,True,False
+2023-05-18 21:59:50,3561639575,Product Owner - (REMOTE),AMH,False,False
+2023-05-18 22:00:12,3605867420,Technical Specialist/Agile Product Owner,"DataStaff, Inc.",True,True
+2023-05-18 22:00:33,3582135197,Software Engineering Manager,Staffing Technologies,True,True
+2023-05-18 22:00:46,3600154655,Software Development Manager,Blue Signal Search,False,False
+2023-05-18 22:01:02,3564960417,Technical Product Owner,Billtrust,True,False
+2023-05-18 22:01:22,3604347819,Product Owner,Asenium,True,True
+2023-05-18 22:01:38,3577083828,Product Owner,Brooksource,True,False
+2023-05-18 22:01:55,3588983351,Software Engineering Manager,VanderHouwen,True,True
+2023-05-18 22:02:15,3583436602,Product Owner,Photon,True,False
+2023-05-18 22:02:38,3594444233,Post Market Quality Product Owner,SQA Solution,True,True
+2023-05-18 22:03:06,3592114509,"Manager, Software Engineering",Digital Room,True,True
+2023-05-18 22:03:21,3575531086,Product Owner - Demand Generation,BHG Financial,True,False
+2023-05-18 22:03:36,3611823961,Product Owner,Consensus,True,True
+2023-05-18 22:03:51,3597762907,Technical Product Owner (Remote),Conexess Group,True,True
+2023-05-18 22:04:07,3559469288,"Director of Product, API + Developer Experience",Storm2,True,False
+2023-05-18 22:04:28,3585979630,Product Owner,RouteOne,True,True
+2023-05-18 22:04:44,3610767088,Senior Product Owner,First Advantage,True,False
+2023-05-18 22:05:03,3609169264,Product Owner,TechDigital,True,True
+2023-05-18 22:05:25,3603252338,ADOBE -AEP,Focus GTS,True,True
+2023-05-18 22:05:40,3520690805,Software Development Manager,Inceed,True,False
+2023-05-18 22:05:58,3552612984,Software Engineering Manager,DASH2,True,True
