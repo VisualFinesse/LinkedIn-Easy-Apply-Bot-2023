@@ -63,7 +63,6 @@ class EasyApplyBot:
     setupLogger()
     # MAX_SEARCH_TIME is 10 hours by default, feel free to modify it
     # MAX_SEARCH_TIME = 10 * 60 * 60
-    MAX_SEARCH_TIME = 5 * 60
 
     def __init__(
         self,
@@ -184,11 +183,11 @@ class EasyApplyBot:
         self.browser, _ = self.next_jobs_page(position, location, jobs_per_page)
         log.info("Looking for jobs.. Please wait..")
 
-        while time.time() - start_time < self.MAX_SEARCH_TIME:
+        while True: # time.time() - start_time < self.MAX_SEARCH_TIME:
             try:
-                log.info(
-                    f"{(self.MAX_SEARCH_TIME - (time.time() - start_time)) // 60} minutes left in this search"
-                )
+                # log.info(
+                #     f"{(self.MAX_SEARCH_TIME - (time.time() - start_time)) // 60} minutes left in this search"
+                # )
 
                 # sleep to make sure everything loads, add random to make us look human.
                 randoTime: float = random.uniform(0.5, 1.5)
@@ -467,7 +466,7 @@ class EasyApplyBot:
 
                 if errorText:
                     if answer_count >= 5:
-                        log.info("Failed to answer question correctly 3 times")
+                        log.info("Failed to answer question correctly 5 times")
                         break
 
                     log.debug("Wrong answer detected")
@@ -520,10 +519,10 @@ class EasyApplyBot:
                         textInput = input_fields.get_attribute("value")
                         log.debug(textInput)
                         if not textInput:
-                            # Need a random values between 2 and 3
-                            randoNum = random.randint(4, 6)
-                            randoDec = randoNum / 2
-                            input_fields.send_keys(randoDec)
+                            # Need a random values between 2, 2.5 3
+                            randoNum = random.randint(0, 2)
+                            randoDec = randoNum / 2 + 2
+                            input_fields.send_keys(str(randoDec))
                             log.info("Answered question")
                             time.sleep(random.uniform(0.5, 2.5))
 
@@ -545,6 +544,7 @@ class EasyApplyBot:
                     answer_count += 1
 
                 elif next_button:
+                    answer_count = 0
                     next_button = driver.find_element_by_xpath(
                         "//button[contains(span, 'Next')]"
                     )
@@ -553,11 +553,13 @@ class EasyApplyBot:
                     log.info("Clicked next button")
                     time.sleep(random.uniform(0.5, 1))
                 elif review_button:
+                    answer_count = 0
                     review_button.click()
                     log.info("Clicked Review button")
                     time.sleep(random.uniform(0.5, 1))
 
                 elif submit_button:
+                    answer_count = 0
                     submit_button.click()
                     log.info("Clicked submit button")
                     time.sleep(random.uniform(0.5, 1))
@@ -565,6 +567,7 @@ class EasyApplyBot:
                     break
 
                 else:
+                    answer_count = 0
                     log.debug("Submit button not available on current screen")
                     scroll_down_modal()
                     count += 1
